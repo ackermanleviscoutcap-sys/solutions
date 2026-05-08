@@ -7,13 +7,13 @@ year.textContent = new Date().getFullYear();
 menuToggle.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("is-open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+  menuToggle.setAttribute("aria-label", isOpen ? "मेन्यू बंद करें" : "मेन्यू खोलें");
 });
 
 navLinks.addEventListener("click", (event) => {
   if (event.target.matches("a")) {
     navLinks.classList.remove("is-open");
     menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation");
+    menuToggle.setAttribute("aria-label", "मेन्यू खोलें");
   }
 });
